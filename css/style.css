@@ -33,6 +33,11 @@ img{
     background-color: #eaeaea;
     border: 1px solid black;
 }
+
+.row{
+    display: flex;
+}
+
 /* contenitore contatti sx */
 .contacts{
     background-color: white;
@@ -40,7 +45,7 @@ img{
     
 }
 .profile-avatar{
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
     height: 50px;
@@ -60,7 +65,7 @@ img{
 
 /* banner */
 .banner{
-    display: flex;
+    
     align-items: center;
     background-color: #8edafc;
     height: 70px;
@@ -76,6 +81,32 @@ img{
    
 }
 
+/* search input */
+input[type=text],.fa-magnifying-glass{
+    
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 30px 5px 20px;
+  }
+
+  .search-chat{
+    background-color: #eaeaea;
+    border-bottom: #ccc 1px solid;
+    padding: 5px;
+  }
+
+
+/* preview chat */
+.preview-chat{
+    
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid grey;
+    height: 60px;
+}
 
 
 

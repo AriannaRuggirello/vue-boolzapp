@@ -9,6 +9,7 @@ var { createApp } = Vue
 createApp({
     data(){
         return{
+            activeMessage :0,
             contacts: [
                 {
                     name: 'Michele',

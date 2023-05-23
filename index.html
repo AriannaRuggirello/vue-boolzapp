@@ -85,9 +85,10 @@
         </section>
         <!-- chat container -->
        <section class="chat-main" >
-        
-            <div v-for="mex in contacts[0].messages" :class="mex.status === 'sent' ? 'send' : 'received'" >
+            <!-- array messagi della chat corrente -->
+            <div v-for="mex in contacts[ activeMessage].messages" :class="mex.status === 'sent' ? 'send' : 'received'" >
                 <span>{{mex.message}}</span>
+                <h6>{{mex.date}}</h6>
 
             </div>
         

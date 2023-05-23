@@ -10,6 +10,13 @@ body{
     height: 100vh;
     
 }
+h6{
+    color: darkgrey;
+    font-size: 10px;
+    font-weight: lighter;
+    position: relative;
+    left: 40%;
+}
 
 header{
     background-color: #009688;

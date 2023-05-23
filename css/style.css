@@ -35,9 +35,9 @@ i{
 
 .container{
     display: flex;
-    width: 70%;
+    max-width: 70%;
     margin: 20px auto;
-    height: 80%;
+    max-height: 80%;
     background-color: #eaeaea;
     border: 1px solid black;
 }
@@ -106,7 +106,7 @@ input[type=text],.fa-magnifying-glass{
 
 /* preview chat */
 .preview-chats{
-    height: calc(100% - 165px);
+    max-height: calc(100% - 165px);
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -117,8 +117,7 @@ input[type=text],.fa-magnifying-glass{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid grey;
-    height: 60px;
-   
+    padding: 10px 0;
 }
 
 

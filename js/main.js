@@ -12,7 +12,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '.img/michele.png',
+                    avatar: './img/michele.png',
                     visible: true,
                     messages: [
                         {
@@ -56,7 +56,7 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: '.img/samuele.png',
+                    avatar: './img/samuele.png',
                     visible: true,
                     messages: [
                         {
@@ -78,7 +78,7 @@ createApp({
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: '.img/alessandroB.png',
+                    avatar: './img/alessandroB.png',
                     visible: true,
                     messages: [
                         {
@@ -95,7 +95,7 @@ createApp({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: '.img/alessandroL.png',
+                    avatar: './img/alessandroL.png',
                     visible: true,
                     messages: [
                         {
@@ -112,7 +112,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: '.img/claudia.png',
+                    avatar: './img/claudia.png',
                     visible: true,
                     messages: [
                         {
@@ -134,7 +134,7 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: '.img/federico.png',
+                    avatar: './img/federico.png',
                     visible: true,
                     messages: [
                         {
@@ -151,7 +151,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: '.img/davide.png',
+                    avatar: './img/davide.png',
                     visible: true,
                     messages: [
                         {

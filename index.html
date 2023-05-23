@@ -47,48 +47,12 @@
         <input type="text" placeholder="cerca o inizia una nuova chat">
        </section>
       <!-- anteprima chat -->
-      <section class="preview-chats">
+      <section class="preview-chats" v-for="contact in contacts">
         <div class="row preview-chat">
             <div class="row avatar-info">
-                <img src="img/user.png" alt="">
+                <img :src="contact.avatar" alt="">
                 <div>
-                    <h4>Milena</h4>
-                    <span>ultimo messaggio inviato</span>
-                </div>   
-                
-            </div>
-            <span>12:00</span>
-        </div>
-
-        <div class="row preview-chat">
-            <div class="row avatar-info">
-                <img src="img/user.png" alt="">
-                <div>
-                    <h4>Milena</h4>
-                    <span>ultimo messaggio inviato</span>
-                </div>   
-                
-            </div>
-            <span>12:00</span>
-        </div>
-
-        <div class="row preview-chat">
-            <div class="row avatar-info">
-                <img src="img/user.png" alt="">
-                <div>
-                    <h4>Milena</h4>
-                    <span>ultimo messaggio inviato</span>
-                </div>   
-                
-            </div>
-            <span>12:00</span>
-        </div>
-
-        <div class="row preview-chat">
-            <div class="row avatar-info">
-                <img src="img/user.png" alt="">
-                <div>
-                    <h4>Milena</h4>
+                    <h4>{{contact.name}}</h4>
                     <span>ultimo messaggio inviato</span>
                 </div>   
                 
@@ -105,9 +69,9 @@
         <section class=" row profile-avatar">
             
             <div class="row avatar-info">
-                <img src="img/user.png" alt="">
+                <img :src="contacts[0].avatar" alt="">
                 <div>
-                    <h4>Milena</h4>
+                    <h4>{{contacts[0].name}}</h4>
                     <span>ultimo accesso alle ore</span>
                 </div>   
             </div>

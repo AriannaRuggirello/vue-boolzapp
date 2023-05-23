@@ -47,8 +47,8 @@
         <input type="text" placeholder="cerca o inizia una nuova chat">
        </section>
       <!-- anteprima chat -->
-      <section class="preview-chats" v-for="contact in contacts">
-        <div class="row preview-chat">
+      <section class="preview-chats" >
+        <div class="row preview-chat"v-for="contact in contacts">
             <div class="row avatar-info">
                 <img :src="contact.avatar" alt="">
                 <div>
@@ -84,7 +84,7 @@
            
         </section>
         <!-- chat container -->
-       <section class="chat-main">
+       <section class="chat-main" >
         <div class="row personal ">
             <div class="message send">
                 <span>testo alla fine</span>
@@ -93,7 +93,7 @@
 
         <div class="row user">
             <div class="message received">
-                <span>testo all'inizio</span>
+                <span >testo all'inizio</span>
             </div>
         </div>
        </section>

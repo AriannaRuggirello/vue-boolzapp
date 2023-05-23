@@ -16,10 +16,18 @@ header{
     height: 100px;
 }
 
+a{
+    color: #68879b;
+}
+
+img{
+   width: 40px;
+}
+
 .container{
    
     display: flex;
-    width: 80%;
+    width: 70%;
     margin: 20px auto;
     height: 80%;
     background-color: #eaeaea;
@@ -28,18 +36,44 @@ header{
 /* contenitore contatti sx */
 .contacts{
     background-color: white;
-    width: 30%;
+    width: 40%;
     
 }
-.contacts-header{
+.profile-avatar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 50px;
     background-color: #eaeaea;
-
 }
 
+.avatar-info{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.icons i{
+    padding: 0 5px;
+    color: #a9a9a9;
+}
+
+
+/* banner */
 .banner{
+    display: flex;
+    align-items: center;
     background-color: #8edafc;
     height: 70px;
+}
+
+.fa-bell-slash{
+    background-color: #f2fbff;
+    color: #8edafc;
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px;
+   
 }
 
 

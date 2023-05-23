@@ -85,17 +85,12 @@
         </section>
         <!-- chat container -->
        <section class="chat-main" >
-        <div class="row personal ">
-            <div class="message send">
-                <span>testo alla fine</span>
-            </div>
-        </div>
+        
+            <div v-for="mex in contacts[0].messages" :class="mex.status === 'sent' ? 'send' : 'received'" >
+                <span>{{mex.message}}</span>
 
-        <div class="row user">
-            <div class="message received">
-                <span >testo all'inizio</span>
             </div>
-        </div>
+        
        </section>
         <!-- footer invio mex  -->
         <section class="row chat-footer">

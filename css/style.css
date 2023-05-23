@@ -131,44 +131,41 @@ input[type=text],.fa-magnifying-glass{
 }
 /* chat header */
 .chat-header{
-    height: 50px;
+    max-height: 50px;
 }
 /* chat main */
 .chat-main{
     height: calc(100% - 100px);
     background-color: darkgrey;
-    overflow-y: scroll;
+    overflow-y: auto;
+   
 }
 
-.message{
-    width: 150px;
-    height: 30px;  
-    margin: 10px;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.message span{
+.chat-main span{ 
     color: black;
-}
-
-.personal {
-    justify-content: flex-end; 
-}
-
-.user{
-    justify-content: flex-start;
-}
-
-.received{
-    justify-content: flex-start;
-    background-color: #ffffff;
+   
 }
 
 .send{
-    background-color: #d5f9ba;
-    
-    
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #d5f9ba;   
+    position: relative;
+    right: -70%; 
+    top: 5%;
+}
+
+.received{
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    position: relative;
+    top: 5%;
+    left: 5%;
 }
 
 /* chat footer */

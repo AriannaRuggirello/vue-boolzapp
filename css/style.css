@@ -24,6 +24,10 @@ img{
    width: 40px;
 }
 
+span{
+    color: grey;
+}
+
 .container{
    
     display: flex;
@@ -100,14 +104,19 @@ input[type=text],.fa-magnifying-glass{
 
 
 /* preview chat */
+.preview-chats{
+    display: flex;
+    flex-direction: column;
+}
+
 .preview-chat{
     
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     border-bottom: 1px solid grey;
     height: 60px;
+   
 }
-
 
 
 

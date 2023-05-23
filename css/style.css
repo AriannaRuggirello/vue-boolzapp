@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8dbd3;
+    position: relative;
+    height: 100vh;
+    
+}
+
+header{
+    background-color: #009688;
+    height: 100px;
+}
+
+.container{
+   
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    height: 80%;
+    background-color: #eaeaea;
+    border: 1px solid black;
+}
+/* contenitore contatti sx */
+.contacts{
+    background-color: white;
+    width: 30%;
+    
+}
+.contacts-header{
+    height: 50px;
+    background-color: #eaeaea;
+
+}
+
+.banner{
+    background-color: #8edafc;
+    height: 70px;
+}
+
+
+
+
+
+/* contenitore chat dx */
+.chat{
+    background-color: #eaeaea;
+    width: 70%;
+    margin-right: 10px;
+    border-left: 1px solid darkgrey;
+}
+
+.chat-header{
+    height: 50px;
+    
+
+}
+
+.chat-main{
+    height: calc(100% - 100px);
+    background-color: darkgrey;
+}
+
+.chat-footer{
+    height: 50px;
+    
+}

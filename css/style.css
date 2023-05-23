@@ -104,10 +104,10 @@ input[type=text],.fa-magnifying-glass{
 
 /* preview chat */
 .preview-chats{
-    height: calc(100% - 160px);
+    height: calc(100% - 165px);
     display: flex;
     flex-direction: column;
-   overflow: scroll;
+    overflow-y: scroll;
    
 }
 
@@ -128,16 +128,48 @@ input[type=text],.fa-magnifying-glass{
     margin-right: 10px;
     border-left: 1px solid darkgrey;
 }
-
+/* chat header */
 .chat-header{
     height: 50px;
 }
-
+/* chat main */
 .chat-main{
     height: calc(100% - 100px);
     background-color: darkgrey;
+    overflow-y: scroll;
 }
 
+.message{
+    width: 150px;
+    height: 30px;  
+    margin: 10px;
+    padding: 5px;
+}
+
+.message span{
+    color: black;
+}
+
+.personal {
+    justify-content: flex-end; 
+}
+
+.user{
+    justify-content: flex-start;
+}
+
+.received{
+    justify-content: flex-start;
+    background-color: #f2fbff;
+}
+
+.send{
+    background-color: #009688;
+    
+    
+}
+
+/* chat footer */
 .chat-footer{
     height: 50px;
     justify-content: space-between;

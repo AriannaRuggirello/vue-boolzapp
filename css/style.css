@@ -29,7 +29,6 @@ span{
 }
 
 .container{
-   
     display: flex;
     width: 70%;
     margin: 20px auto;
@@ -105,12 +104,14 @@ input[type=text],.fa-magnifying-glass{
 
 /* preview chat */
 .preview-chats{
+    height: calc(100% - 160px);
     display: flex;
     flex-direction: column;
+   overflow: scroll;
+   
 }
 
 .preview-chat{
-    
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid grey;
@@ -130,8 +131,6 @@ input[type=text],.fa-magnifying-glass{
 
 .chat-header{
     height: 50px;
-    
-
 }
 
 .chat-main{
@@ -141,5 +140,12 @@ input[type=text],.fa-magnifying-glass{
 
 .chat-footer{
     height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
     
+}
+
+.chat-footer input{
+    width: 90%;
 }

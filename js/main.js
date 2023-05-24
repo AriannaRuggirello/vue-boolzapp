@@ -4,8 +4,12 @@ var { createApp } = Vue
 createApp({
     data(){
         return{
+            // prop attiva in quel momento
             activeMessage :0,
+            // prop per la creazione del nuovo mex quando lo si invia
             newMessage: '',
+            // prop necessaria per inserire nell'input da filtrare
+            searchText: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -177,28 +181,47 @@ createApp({
         // Click sul contatto mostra la conversazione del contatto cliccato
 
     mainChatUser(idx){
+        // collegando l'indice in html definisco che l'elemento attivo in quel momento è uguale all'indice
         this.activeMessage = idx;
     },
     sendNewMessage(){
         // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-       
-       
-        if(this.newMessage != ''){
-            this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: this.newMessage, status: 'sent'});
 
+        // se il messaggio che stai creando non è vuoto
+        if(this.newMessage != ''){
+            // allora aggiungo il messaggio 'push' in coda ai messages creando un nuovo obj con message creato da noi e status sent
+            this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: this.newMessage, status: 'sent'});
+            // risposta dal computer con un tempo impostato creando un obj con message fisso e status received
             setTimeout(()=> {
                 this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: 'ok', status: 'received'});
             },1000
             )
         }
+        // stampo il mex
         this.newMessage='';
     },
-    }  
+    } ,
+    // una computed property semplifica il calcolo di valori basati su altri dati reattivi e si assicura che i risultati siano sempre aggiornati in modo automatico.
+    computed: {
+        // funzione  necessaria alla ricerca
+        filteredSearchContacts() {
+            // var uguale al testo di ricerca filtrato in testo minuscolo e senza spazi
+          const filterText = this.searchText.toLowerCase().trim();
+        //   se la var filtrata non è presente allora mi stamperà l'array contacts originale 
+          if (!filterText) {
+            return this.contacts;
+          }
+        //   altrimenti l'array filtrato recupererà il valore filtrato cercando di vedere se è incluso nell'array originale
+          return this.contacts.filter(contact =>
+            contact.name.toLowerCase().includes(filterText)
+          );
+        }
+      } 
 }).mount('#app')
 
 
 
-
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 
 
 

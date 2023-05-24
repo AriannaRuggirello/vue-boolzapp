@@ -44,11 +44,11 @@
        <!-- cerca chat -->
        <section class="row search-chat">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="cerca o inizia una nuova chat">
+        <input type="text" v-model='searchText' placeholder="cerca o inizia una nuova chat">
        </section>
       <!-- anteprima chat -->
       <section class="preview-chats" >
-        <div class="row preview-chat" v-for="(contact,idx) in contacts" @click="mainChatUser(idx)">
+        <div class="row preview-chat"  v-for="(contact,idx) in filteredContacts" :key="idx" @click="mainChatUser(idx)">
             <div class="row avatar-info">
                 <img :src="contact.avatar" alt="">
                 <div>

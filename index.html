@@ -48,14 +48,13 @@
        </section>
       <!-- anteprima chat -->
       <section class="preview-chats" >
-        <div class="row preview-chat"v-for="contact in contacts">
+        <div class="row preview-chat" v-for="(contact,idx) in contacts" @click="mainChatUser(idx)">
             <div class="row avatar-info">
                 <img :src="contact.avatar" alt="">
                 <div>
                     <h4>{{contact.name}}</h4>
                     <span>ultimo messaggio inviato</span>
                 </div>   
-                
             </div>
             <span>12:00</span>
         </div>
@@ -69,9 +68,9 @@
         <section class=" row profile-avatar">
             
             <div class="row avatar-info">
-                <img :src="contacts[0].avatar" alt="">
+                <img :src="contacts[activeMessage].avatar" alt="">
                 <div>
-                    <h4>{{contacts[0].name}}</h4>
+                    <h4>{{contacts[activeMessage].name}}</h4>
                     <span>ultimo accesso alle ore</span>
                 </div>   
             </div>
@@ -86,10 +85,9 @@
         <!-- chat container -->
        <section class="chat-main" >
             <!-- array messagi della chat corrente -->
-            <div v-for="mex in contacts[ activeMessage].messages" :class="mex.status === 'sent' ? 'send' : 'received'" >
+            <div v-for="mex in contacts[activeMessage].messages" :class="mex.status === 'sent' ? 'send' : 'received'">
                 <span>{{mex.message}}</span>
                 <h6>{{mex.date}}</h6>
-
             </div>
         
        </section>

@@ -176,6 +176,17 @@ createApp({
     
         
         }   
+    },
+    methods:{
+        // Click sul contatto mostra la conversazione del contatto cliccato
+
+    mainChatUser(idx){
+        
+        this.activeMessage = idx
+      
+        // console.log('hai cliccato');
+
+    }
     }  
 }).mount('#app')
 

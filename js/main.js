@@ -1,8 +1,3 @@
-// Milestone 1
-// Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
-// Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
-
-
 
 var { createApp } = Vue
 
@@ -10,6 +5,7 @@ createApp({
     data(){
         return{
             activeMessage :0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -181,12 +177,22 @@ createApp({
         // Click sul contatto mostra la conversazione del contatto cliccato
 
     mainChatUser(idx){
-        
-        this.activeMessage = idx
-      
-        // console.log('hai cliccato');
+        this.activeMessage = idx;
+    },
+    sendNewMessage(){
+        // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+       
+       
+        if(this.newMessage != ''){
+            this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: this.newMessage, status: 'sent'});
 
-    }
+            setTimeout(()=> {
+                this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: 'ok', status: 'received'});
+            },1000
+            )
+        }
+        this.newMessage='';
+    },
     }  
 }).mount('#app')
 

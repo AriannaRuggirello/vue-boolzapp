@@ -47,10 +47,10 @@ i:hover{
 }
 
 .container{
-    display: flex;
     max-width: 70%;
+    height: 80%;
+    display: flex;
     margin: 20px auto;
-    max-height: 80%;
     background-color: #eaeaea;
     border: 1px solid black;
 }
@@ -82,8 +82,6 @@ i:hover{
     align-items: center;
     padding-left: 10px;
 }
-
-
 
 /* banner */
 .banner{

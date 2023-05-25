@@ -213,8 +213,7 @@ createApp({
         }
       },
     deleteMessage(indice){
-        
-         this.contacts[this.activeMessage].messages.splice(indice,1);
+        this.contacts[this.activeMessage].messages.splice(indice,1);  
      },
     } ,
     // una computed property semplifica il calcolo di valori basati su altri dati reattivi e si assicura che i risultati siano sempre aggiornati in modo automatico.

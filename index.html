@@ -87,10 +87,13 @@
        <section class="chat-main" >
             <!-- array messagi della chat corrente -->
             <div v-for="(mex,idx) in contacts[activeMessage].messages" :class="mex.status === 'sent' ? 'send' : 'received'"  >
-                <span>{{mex.message}}</span>
+                <div class="row">
+                    <span>{{mex.message}}</span>
+                    <i @click="showMenuDropdown(idx)" class="fa-solid fa-chevron-down"></i>
+                </div>
+               
                 <h6>{{mex.date}}</h6>
                 <!-- menu a comparsa -->
-                <i @click="showMenuDropdown(idx)" class="fa-solid fa-chevron-down"></i>
                 <div class="dropdown-content" v-if="showMenu === idx">
                     <a href="#"> Message info</a>
                     <a @click.stop="deleteMessage(idx)" href="#">Delete message</a>

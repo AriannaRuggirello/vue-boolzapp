@@ -48,8 +48,8 @@
        </section>
       <!-- anteprima chat -->
       <section class="preview-chats" >
-        <div class="row preview-chat"  v-for="(contact,idx) in filteredSearchContacts" :key="idx" @click="mainChatUser(idx)">
-            <div class="row avatar-info">
+        <div class="row preview-chat"  v-for="(contact,idx) in filteredSearchContacts" :key="idx" @click="mainChatUser(idx)":class="(activeMessage === idx) ? 'active' : ''">
+            <div class="row avatar-info" >
                 <img :src="contact.avatar" alt="">
                 <div>
                     <h4>{{contact.name}}</h4>

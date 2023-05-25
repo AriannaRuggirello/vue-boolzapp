@@ -129,12 +129,17 @@ input[type=text],.fa-magnifying-glass{
 }
 
 .preview-chat{
-    
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid grey;
     padding: 10px 0;
 }
+
+.active{
+    background-color:#ccc;
+
+}
+
 .preview-chat:hover{
     background-color:#ccc;
 }

@@ -10,6 +10,8 @@ createApp({
             newMessage: '',
             // prop necessaria per inserire nell'input da filtrare
             searchText: '',
+            // click per far apparire il menu dropdown nel mex
+            showMenu : null,
             contacts: [
                 {
                     name: 'Michele',
@@ -200,6 +202,20 @@ createApp({
         // stampo il mex
         this.newMessage='';
     },
+    showMenuDropdown(indice){
+        
+        if(this.showMenu === indice)
+        {
+            this.showMenu = null;
+        }else{
+            this.showMenu = indice;
+            
+        }
+      },
+    deleteMessage(indice){
+        
+         this.contacts[this.activeMessage].messages.splice(indice,1);
+     },
     } ,
     // una computed property semplifica il calcolo di valori basati su altri dati reattivi e si assicura che i risultati siano sempre aggiornati in modo automatico.
     computed: {
@@ -216,7 +232,8 @@ createApp({
             contact.name.toLowerCase().includes(filterText)
           );
         }
-      } 
+      },
+    
 }).mount('#app')
 
 

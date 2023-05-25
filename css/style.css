@@ -129,6 +129,7 @@ input[type=text],.fa-magnifying-glass{
 }
 
 .preview-chat{
+    
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid grey;
@@ -137,7 +138,6 @@ input[type=text],.fa-magnifying-glass{
 .preview-chat:hover{
     background-color:#ccc;
 }
-
 
 
 /* contenitore chat dx */

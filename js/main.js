@@ -189,8 +189,8 @@ createApp({
     sendNewMessage(){
         // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 
-        // se il messaggio che stai creando non è vuoto
-        if(this.newMessage != ''){
+        // se il messaggio che stai creando non è vuoto e non ci sono spazi vuoti
+        if(this.newMessage != '' && this.newMessage.trim()){
             // allora aggiungo il messaggio 'push' in coda ai messages creando un nuovo obj con message creato da noi e status sent
             this.contacts[this.activeMessage].messages.push({date: '10/01/2020 15:30:55',message: this.newMessage, status: 'sent'});
             // risposta dal computer con un tempo impostato creando un obj con message fisso e status received
@@ -213,7 +213,8 @@ createApp({
         }
       },
     deleteMessage(indice){
-        this.contacts[this.activeMessage].messages.splice(indice,1);  
+        this.contacts[this.activeMessage].messages.splice(indice,1);
+        this.showMenu = null;
      },
     } ,
     // una computed property semplifica il calcolo di valori basati su altri dati reattivi e si assicura che i risultati siano sempre aggiornati in modo automatico.
@@ -232,6 +233,12 @@ createApp({
           );
         }
       },
+    watch:{
+        activeMessage(){
+            // quando cambio la chat si chiude il menu a comparsa sulla chat corrente
+            this.showMenu = null;
+        }
+    }  
     
 }).mount('#app')
 

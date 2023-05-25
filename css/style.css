@@ -29,6 +29,7 @@ a{
 
 img{
    width: 40px;
+   margin-right: 10px;
 }
 
 span{
@@ -38,6 +39,10 @@ span{
 i{
     padding: 0 5px;
     color: #a9a9a9;
+}
+
+i:hover{
+    color: gray;
 }
 
 .container{
@@ -65,6 +70,10 @@ i{
     align-items: center;
     height: 50px;
     background-color: #eaeaea;
+}
+
+.profile-avatar:hover{
+    background-color: #ccc;
 }
 
 .avatar-info{
@@ -125,6 +134,9 @@ input[type=text],.fa-magnifying-glass{
     align-items: center;
     border-bottom: 1px solid grey;
     padding: 10px 0;
+}
+.preview-chat:hover{
+    background-color:#ccc;
 }
 
 
